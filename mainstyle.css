@@ -1,0 +1,131 @@
+html {
+    scroll-behavior: smooth;     /* Smoothly scrolls when clicking navbar links */
+}
+
+body {
+    font-family:'Courier', Times, serif;
+    margin: 0;
+}
+
+.main-section {
+    min-height: 100vh;
+    background-image: url("images/mainbackground.png");
+    background-size: cover;        /* Scales to cover the whole container */
+    background-position: center;   /* Centers the focal point */
+    background-repeat: no-repeat;  /* Prevents tiling */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-top: 60px;
+}
+
+.navbar {
+    position: fixed;             /* Locks the navbar to the top of the screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    overflow: hidden;
+    background-color: #e3b9c4;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.navbar a {
+    
+    float: right;
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 20px;
+    font-weight: bolder;
+    text-decoration: none;
+    font-size: 20px;
+
+}
+
+.navbar a:hover {
+    background-color:  #be949f;
+}
+
+.navbarlace {
+  width: 100%;               /* Stretches to match the window size */
+  height: 60px;              /* Set this to the height of your image (or desired strip height) */
+  background-image: url("images/lace.png");
+  background-repeat: repeat-x; /* Tiles horizontally only (use 'repeat' for both X and Y) */
+  background-position: left bottom;
+}
+
+.title-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;     /* Keeps text centered horizontally */
+    text-align: center;
+    margin: 15vh auto 0;
+    margin-top: 30vh;        /* Adjust this number to move it higher or lower */
+    padding: 0 2rem;
+    width: fit-content;
+    position: relative;
+    z-index: 2;
+}
+
+.title-bow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: auto;
+}
+
+.title-text h1{
+    margin: 0 0 0.5rem 0;
+    font-size: 4rem;
+    color: #5b7350;
+}
+
+.title-text p{
+    margin: 0;
+    font-size: 2rem;
+    color: #ac7685;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;                /* Space between icons */
+    margin-top: 1.25rem;         /* Space below "Engineering Science @ UofT" */
+}
+
+.social-links a {
+    color: #ac7685;              /* Matches your heading/paragraph text color */
+    font-size: 1.6rem;           /* Controls icon size */
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-links a:hover {
+    color: #e3b9c4;              /* Highlights in your navbar pink on hover */
+    transform: translateY(-3px); /* Little upward float on hover */
+}
+
+.msp430-img{
+position: absolute;
+    bottom: 2vh;
+    left: 3vw;
+    width: clamp(100px, 25vw, 300px); /* Minimum 70px, scales at 12% of screen width, max 180px */
+    height: auto;
+    transform: rotate(30deg);
+    z-index: 1;
+}
+
+.msp430-img:hover {
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.4));
+}
+
+.about-section {
+    position: relative;
+    z-index: 2;
+    background-color: #e3b9c4;   /* Matches navbar pink, or use #fff5f8 for a softer cream-pink */
+    color: #ffffff;
+    padding: 5rem 10%;
+    min-height: 60vh;
+}
